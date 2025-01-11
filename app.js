@@ -10,5 +10,10 @@ do {
         alert('Parabéns ' + nome + ' você acertou o numero secreto!' + numeroSecreto);
     } else {
         alert('Que pena, tente novamente!');
-    }    
+        if (numeroEscolhido > numeroSecreto) {
+            alert('O numero secreto é menor!');
+        } else {
+            alert('O numero secreto é maior!');
+        } 
+}   
 } while (numeroEscolhido != numeroSecreto);
