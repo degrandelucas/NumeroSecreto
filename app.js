@@ -5,7 +5,7 @@ console.log('Numero escolhido: ' + numeroEscolhido);
 
 // Controle de fluxo
 if (numeroSecreto == numeroEscolhido) {
-    alert('Parabéns, você acertou!');
+    alert('Parabéns, você acertou o numero secreto!' + numeroSecreto);
 } else {
     alert('Que pena, tente novamente!');
 }
