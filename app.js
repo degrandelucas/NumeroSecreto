@@ -1,11 +1,13 @@
 alert('Bem vindo ao Jogo do Numero Secreto!');
 let numeroSecreto = 29;
-let numeroEscolhido = prompt('Escolha o numero entre 1 e 30: ');
-console.log('Numero escolhido: ' + numeroEscolhido);
+let numeroEscolhido = 0;
 
-// Controle de fluxo
-if (numeroSecreto == numeroEscolhido) {
-    alert('Parabéns, você acertou o numero secreto!' + numeroSecreto);
-} else {
-    alert('Que pena, tente novamente!');
-}
+// Controle de Fluxo (Estruturas de Controle)
+do {
+    numeroEscolhido = prompt('Escolha o numero entre 1 e 30: ');
+    if (numeroSecreto == numeroEscolhido) {
+        alert('Parabéns, você acertou o numero secreto!' + numeroSecreto);
+    } else {
+        alert('Que pena, tente novamente!');
+    }    
+} while (numeroEscolhido != numeroSecreto);
