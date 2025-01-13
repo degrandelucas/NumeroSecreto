@@ -1,6 +1,6 @@
 alert('Bem vindo ao Jogo do Numero Secreto!');
 let nome = prompt('Qual é o seu nome?');
-let numeroSecreto = parseInt(Math.random() * 30 + 1);
+let numeroSecreto = parseInt(Math.random() * 30 + 1); // base 10 (decimal)
 let numeroEscolhido = 0;
 let tentativas = 0;
 let palavraTentativa;
