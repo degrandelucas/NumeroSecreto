@@ -1,8 +1,30 @@
+html {
+    /* font-size: 10px; */
+    font-size: 62.5%;
+  }
+  
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    background-image: #f0f0f0;
-    background-size: cover;
-    background-position: center;
+    background-image: url(fundo_img_numeros.jpg);
+    background-size: auto;
     background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0;
+    color: aliceblue;
+    font-family: Montserrat, "Open Sans", Roboto, Verdana, Tahoma, sans-serif;
+    font-size: 1.728rem;
+    line-height: 1.6;
+}
+
+
+#tituloPagina{
+        font-size: 8rem;
+        font-weight: bold;
+        margin: 2rem;
+        text-shadow: #FC0 0.1rem 0 1rem;
 }
