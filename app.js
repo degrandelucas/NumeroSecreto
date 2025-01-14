@@ -5,8 +5,8 @@ let tentativas = 0;
 let palavraTentativa;
 let titulo = document.getElementById('tituloPagina');
 titulo.innerHTML = 'Jogo do Número Secreto';
-
-// Controle de Fluxo (Estruturas de Controle)
+let descricao = document.querySelector('p');
+descricao.innerHTML = 'Adivinhe o número secreto entre 1 e ' + numeroMaximo;
 
 // Controle de Fluxo (Estruturas de Controle)
 

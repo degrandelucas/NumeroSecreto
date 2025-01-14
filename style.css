@@ -13,7 +13,7 @@ html {
 
 body {
     background-image: url(fundo_img_numeros.jpg);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     color: aliceblue;
     font-family: Montserrat, "Open Sans", Roboto, Verdana, Tahoma, sans-serif;
@@ -23,8 +23,16 @@ body {
 
 
 #tituloPagina{
-        font-size: 8rem;
-        font-weight: bold;
-        margin: 2rem;
-        text-shadow: #FC0 0.1rem 0 1rem;
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 2rem;
+    text-shadow: #FC0 0.1rem 0 1rem;
+}
+
+p{
+    font-size: 3rem;
+    margin: 2rem;
+    text-shadow: #FC0 0.1rem 0 1rem;
+    text-wrap: wrap;
+    width: 50%;
 }
