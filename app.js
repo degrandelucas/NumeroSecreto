@@ -24,7 +24,6 @@ function verificarChute(){
     palavraTentativa = tentativas > 1 ? ' tentativas' : ' tentativa';
     if (numeroSecreto == numeroEscolhido) {
         exibirTextoNaTela('respostaAposChute','Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
-        novoJogo();
     }
     else if (numeroEscolhido > numeroSecreto) {
         exibirTextoNaTela('respostaAposChute','O numero secreto é menor que o escolhido ' + numeroEscolhido);
