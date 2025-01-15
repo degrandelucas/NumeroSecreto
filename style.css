@@ -21,6 +21,9 @@ body {
     line-height: 1.6;
 }
 
+.icon{
+    fill: aqua;
+}
 
 #tituloPagina{
     font-size: 8rem;
