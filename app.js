@@ -13,9 +13,12 @@ function exibirTextoNaTela(tag, texto){
     campoTexto.innerHTML = texto;
 }
 
-exibirTextoNaTela('tituloPagina', 'Jogo do Número Secreto');
-exibirTextoNaTela('descricao', 'Adivinhe o número secreto entre 1 e ' + numeroMaximo);
+function exibirTextoTelaInicial() {
+    exibirTextoNaTela('tituloPagina', 'Jogo do Número Secreto');
+    exibirTextoNaTela('descricao', 'Adivinhe o número secreto entre 1 e ' + numeroMaximo);
+}
 
+exibirTextoTelaInicial();
 
 // Controle de Fluxo (Estruturas de Controle)
 function verificarChute(){
@@ -23,16 +26,18 @@ function verificarChute(){
     tentativas++;
     palavraTentativa = tentativas > 1 ? ' tentativas' : ' tentativa';
     if (numeroSecreto == numeroEscolhido) {
-        exibirTextoNaTela('respostaAposChute','Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
+        exibirTextoNaTela('tituloPagina','Acertou!!!');
+        exibirTextoNaTela('descricao','Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
     }
     else if (numeroEscolhido > numeroSecreto) {
-        exibirTextoNaTela('respostaAposChute','O numero secreto é menor que ' + numeroEscolhido);
+        exibirTextoNaTela('descricao','O numero secreto é menor que ' + numeroEscolhido);
         } else {
-            exibirTextoNaTela('respostaAposChute','O numero secreto é maior que ' + numeroEscolhido);
+            exibirTextoNaTela('descricao','O numero secreto é maior que ' + numeroEscolhido);
         } 
 }
 
 function novoJogo(){
     exibirTextoNaTela('respostaAposChute','');
     numeroSecreto = gerarNumeroSecreto(numeroMaximo);    tentativas = 0;
+    exibirTextoTelaInicial();
 }
