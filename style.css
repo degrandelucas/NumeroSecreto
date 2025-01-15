@@ -21,21 +21,64 @@ body {
     line-height: 1.6;
 }
 
-.icon{
-    fill: aqua;
-}
-
 #tituloPagina{
     font-size: 8rem;
     font-weight: bold;
     margin: 2rem;
-    text-shadow: #FC0 0.1rem 0 1rem;
+    text-shadow: rgb(87, 2, 2) 0.1rem 0 1rem;
 }
 
 p{
     font-size: 3rem;
     margin: 2rem;
-    text-shadow: #FC0 0.1rem 0 1rem;
-    text-wrap: wrap;
-    width: 50%;
+    text-shadow: rgb(87, 2, 2) 0.1rem 0 1rem;
+}
+
+/* Estilo base para todos os botões */
+.button {
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 12rem;
+}
+
+/* Estilo específico para o botão "Chute" */
+.button-chute {
+    background-color: #007BFF; 
+    color: #FFFFFF; 
+    border: none;
+    margin-left: 2rem;
+}
+
+.button-chute:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo específico para o botão "Zerar" */
+.button-reset {
+    background-color: #FFFFFF; 
+    color: #4A4A4A; 
+    border: 1px solid #CCCCCC;
+}
+
+.button-reset:hover {
+    background-color: #e1e7ed; 
+}
+
+.container{
+    display: flex;
+    align-items: column;
+    flex-flow: column wrap;
+}
+
+/* Campo chute */
+#campoNumeroChute{
+    font-size: 3rem;
+    margin: 2rem;
+    text-shadow: rgb(233, 233, 233) 0.1rem 0 1rem;
+    text-align: center;
+    width: 10%;
 }

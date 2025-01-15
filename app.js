@@ -1,26 +1,39 @@
-let numeroMaximo = 50;
-let numeroSecreto = parseInt(Math.random() * 50 + 1); // base 10 (decimal)
+let numeroMaximo = 100;
+let numeroSecreto = gerarNumeroSecreto(numeroMaximo);
 let numeroEscolhido = 0;
 let tentativas = 0;
 let palavraTentativa;
-let titulo = document.getElementById('tituloPagina');
-titulo.innerHTML = 'Jogo do Número Secreto';
-let descricao = document.querySelector('p');
-descricao.innerHTML = 'Adivinhe o número secreto entre 1 e ' + numeroMaximo;
+
+function gerarNumeroSecreto(numeroMaximo){
+    return parseInt(Math.random() * numeroMaximo + 1);
+}
+
+function exibirTextoNaTela(tag, texto){
+    let campoTexto = document.getElementById(tag);
+    campoTexto.innerHTML = texto;
+}
+
+exibirTextoNaTela('tituloPagina', 'Jogo do Número Secreto');
+exibirTextoNaTela('descricao', 'Adivinhe o número secreto entre 1 e ' + numeroMaximo);
+
 
 // Controle de Fluxo (Estruturas de Controle)
+function verificarChute(){
+    numeroEscolhido = parseInt(document.getElementById('campoNumeroChute').value);
+    tentativas++;
+    palavraTentativa = tentativas > 1 ? ' tentativas' : ' tentativa';
+    if (numeroSecreto == numeroEscolhido) {
+        exibirTextoNaTela('respostaAposChute','Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
+        novoJogo();
+    }
+    else if (numeroEscolhido > numeroSecreto) {
+        exibirTextoNaTela('respostaAposChute','O numero secreto é menor que o escolhido ' + numeroEscolhido);
+        } else {
+            exibirTextoNaTela('respostaAposChute','O numero secreto é maior que o escolhido ' + numeroEscolhido);
+        } 
+}
 
-// do {
-//     numeroEscolhido = console.log(`Escolha o numero entre 1 e ${numeroMaximo}: `);
-//     tentativas++;
-//     palavraTentativa = tentativas > 1 ? ' tentativas' : ' tentativa';
-//     if (numeroSecreto == numeroEscolhido) {
-//         console.log('Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
-//     }
-//     else if (numeroEscolhido > numeroSecreto) {
-//         console.log('O numero secreto é menor que o escolhido ' + numeroEscolhido);
-//         } else {
-//             console.log('O numero secreto é maior que o escolhido ' + numeroEscolhido);
-//         } 
-// }
-// while (numeroEscolhido != numeroSecreto);
+function novoJogo(){
+    exibirTextoNaTela('respostaAposChute','');
+    numeroSecreto = gerarNumeroSecreto(numeroMaximo);    tentativas = 0;
+}

@@ -3,4 +3,27 @@
     /* font-size: 8px; */
     font-size: 50%;
   }
+
+  body{
+    text-align: center;
+    align-content: center;
+    margin: 1.5rem;
+  }
+
+  #tituloPagina{
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2rem;
+    text-shadow: rgb(87, 2, 2) 0.1rem 0 1rem;
+  }
+
+  p{
+    align-items: center;
+  }
+
+  /* Campo chute */
+#campoNumeroChute{
+    align-self: center;
+    width: 20%;
+    }
 }

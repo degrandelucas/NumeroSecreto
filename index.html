@@ -19,9 +19,15 @@
 </head>
 <body>
     <h1 id="tituloPagina"></h1>
-
-    <p></p>
-    
+    <p id="descricao"></p>
+    <div class="container">
+        <p id="respostaAposChute"></p>
+        <input type="number" id="campoNumeroChute" name="campoNumeroChute" min="1" max="100" />
+        <div>
+            <button class="button button-chute" onclick="verificarChute()">Chutar</button>
+            <button class="button button-reset" onclick="novoJogo()">Novo Jogo</button>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
