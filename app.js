@@ -26,9 +26,9 @@ function verificarChute(){
         exibirTextoNaTela('respostaAposChute','Parabéns, você acertou o numero secreto ' + numeroSecreto + ' em ' + tentativas + palavraTentativa);
     }
     else if (numeroEscolhido > numeroSecreto) {
-        exibirTextoNaTela('respostaAposChute','O numero secreto é menor que o escolhido ' + numeroEscolhido);
+        exibirTextoNaTela('respostaAposChute','O numero secreto é menor que ' + numeroEscolhido);
         } else {
-            exibirTextoNaTela('respostaAposChute','O numero secreto é maior que o escolhido ' + numeroEscolhido);
+            exibirTextoNaTela('respostaAposChute','O numero secreto é maior que ' + numeroEscolhido);
         } 
 }
 
