@@ -31,13 +31,16 @@ function verificarChute(){
     }
     else if (numeroEscolhido > numeroSecreto) {
         exibirTextoNaTela('descricao','O numero secreto é menor que ' + numeroEscolhido);
+        document.getElementById('campoNumeroChute').value = '';
         } else {
             exibirTextoNaTela('descricao','O numero secreto é maior que ' + numeroEscolhido);
+            document.getElementById('campoNumeroChute').value = '';
         } 
 }
 
 function novoJogo(){
     numeroSecreto = gerarNumeroSecreto(numeroMaximo);    tentativas = 0;
     exibirTextoTelaInicial();
+    document.getElementById('campoNumeroChute').value = '';
 }
     
