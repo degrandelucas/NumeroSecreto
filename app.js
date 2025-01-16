@@ -37,7 +37,7 @@ function verificarChute(){
 }
 
 function novoJogo(){
-    exibirTextoNaTela('respostaAposChute','');
     numeroSecreto = gerarNumeroSecreto(numeroMaximo);    tentativas = 0;
     exibirTextoTelaInicial();
 }
+    
