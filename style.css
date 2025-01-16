@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    text-align: center;
     background-image: url(fundo_img_numeros.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,6 +80,7 @@ p{
 
 /* Campo chute */
 #campoNumeroChute{
+    align-self: center;
     font-size: 3rem;
     margin: 2rem;
     text-shadow: rgb(233, 233, 233) 0.1rem 0 1rem;
