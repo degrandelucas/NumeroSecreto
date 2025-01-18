@@ -68,5 +68,7 @@ Este projeto é um jogo interativo desenvolvido em **HTML**, **CSS** e **JavaScr
 ---
 
 ## Autor
-
 Lucas Degrande
+
+## Pagina
+https://degrandelucas.github.io/NumeroSecreto/
