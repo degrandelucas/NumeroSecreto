@@ -11,6 +11,14 @@ function gerarNumeroSecreto(numeroMaximo){
 function exibirTextoNaTela(tag, texto){
     let campoTexto = document.getElementById(tag);
     campoTexto.innerHTML = texto;
+    if ('speechSynthesis' in window) {
+        let discurso = new SpeechSynthesisUtterance(texto);
+        discurso.lang = 'pt-BR'; 
+        discurso.rate = 1.5; 
+        window.speechSynthesis.speak(discurso); 
+    } else {
+        console.log("Web Speech API não suportada neste navegador.");
+    }
 }
 
 function exibirTextoTelaInicial() {
